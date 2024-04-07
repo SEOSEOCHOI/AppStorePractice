@@ -9,11 +9,19 @@ import UIKit
 import SnapKit
 
 class SearchView: BaseView {
+    let tableView = {
+       let view = UITableView()
+        view.register(SearchTableViewCell.self, forCellReuseIdentifier: SearchTableViewCell.identifier)
+        view.backgroundColor = .clear
+        return view
+    }()
     override func configureHierarchy() {
-        
+        addSubview(tableView)
     }
     override func configureLayout() {
-        
+        tableView.snp.makeConstraints { make in
+            make.edges.equalTo(safeAreaLayoutGuide)
+        }
     }
     override func configureView() {
         super.configureView()

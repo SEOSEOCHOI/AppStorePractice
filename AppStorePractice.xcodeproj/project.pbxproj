@@ -19,6 +19,9 @@
 		2B5DBE7F2BC1BE2F002F4116 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2B5DBE7E2BC1BE2F002F4116 /* SnapKit */; };
 		2B5DBE822BC1BE4C002F4116 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 2B5DBE812BC1BE4C002F4116 /* RxCocoa */; };
 		2B5DBE842BC1BE4C002F4116 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2B5DBE832BC1BE4C002F4116 /* RxSwift */; };
+		2B5DBE862BC1C53E002F4116 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DBE852BC1C53D002F4116 /* SearchTableViewCell.swift */; };
+		2B5DBE892BC267C7002F4116 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DBE882BC267C7002F4116 /* Network.swift */; };
+		2B5DBE8B2BC26801002F4116 /* iTunes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DBE8A2BC26801002F4116 /* iTunes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +36,9 @@
 		2B5DBE752BC1B5A1002F4116 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		2B5DBE772BC1B5AC002F4116 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		2B5DBE792BC1B5C5002F4116 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		2B5DBE852BC1C53D002F4116 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		2B5DBE882BC267C7002F4116 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		2B5DBE8A2BC26801002F4116 /* iTunes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +74,7 @@
 		2B5DBE582BC1B289002F4116 /* AppStorePractice */ = {
 			isa = PBXGroup;
 			children = (
+				2B5DBE872BC267BE002F4116 /* Network */,
 				2B5DBE742BC1B594002F4116 /* Search */,
 				2B5DBE6F2BC1B4DF002F4116 /* Base */,
 				2B5DBE592BC1B289002F4116 /* AppDelegate.swift */,
@@ -91,11 +98,21 @@
 		2B5DBE742BC1B594002F4116 /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				2B5DBE852BC1C53D002F4116 /* SearchTableViewCell.swift */,
 				2B5DBE752BC1B5A1002F4116 /* SearchView.swift */,
 				2B5DBE772BC1B5AC002F4116 /* SearchViewController.swift */,
 				2B5DBE792BC1B5C5002F4116 /* SearchViewModel.swift */,
 			);
 			path = Search;
+			sourceTree = "<group>";
+		};
+		2B5DBE872BC267BE002F4116 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				2B5DBE882BC267C7002F4116 /* Network.swift */,
+				2B5DBE8A2BC26801002F4116 /* iTunes.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,8 +199,11 @@
 				2B5DBE712BC1B4E6002F4116 /* BaseViewController.swift in Sources */,
 				2B5DBE732BC1B55E002F4116 /* BaseView.swift in Sources */,
 				2B5DBE5A2BC1B289002F4116 /* AppDelegate.swift in Sources */,
+				2B5DBE862BC1C53E002F4116 /* SearchTableViewCell.swift in Sources */,
 				2B5DBE762BC1B5A1002F4116 /* SearchView.swift in Sources */,
+				2B5DBE892BC267C7002F4116 /* Network.swift in Sources */,
 				2B5DBE5C2BC1B289002F4116 /* SceneDelegate.swift in Sources */,
+				2B5DBE8B2BC26801002F4116 /* iTunes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

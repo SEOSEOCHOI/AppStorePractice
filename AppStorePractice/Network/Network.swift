@@ -20,7 +20,7 @@ class iTunesNetwork {
     static func fetchiTunesData(term: String) -> Observable<iTunes> {
         
         return  Observable<iTunes>.create { observer in
-            guard let url = URL(string: "https://itunes.apple.com/search?term=\(term)1&country=KR&media=software&entity=software&limit=10") else {
+            guard let url = URL(string: "https://itunes.apple.com/search?term=\(term)&country=KR&media=software&limit=10") else {
                 observer.onError(APIError.invalidURL)
                 return Disposables.create()
             }
@@ -43,9 +43,6 @@ class iTunesNetwork {
                     observer.onError(APIError.statusError)
                     return
                 }
-                print(response.statusCode)
-                print(urlRequest.url?.description)
-                print(urlRequest.allHTTPHeaderFields)
                 
                 
                 if let data = data,

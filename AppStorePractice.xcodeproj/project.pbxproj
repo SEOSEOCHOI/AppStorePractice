@@ -28,6 +28,7 @@
 		2B5DBE992BC2B55D002F4116 /* PosterImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DBE982BC2B55D002F4116 /* PosterImageView.swift */; };
 		2B5DBE9B2BC2B56A002F4116 /* DetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DBE9A2BC2B56A002F4116 /* DetailCollectionViewCell.swift */; };
 		2B5DBE9D2BC2C4C5002F4116 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DBE9C2BC2C4C4002F4116 /* DetailView.swift */; };
+		2B5DBE9F2BC2D7AF002F4116 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DBE9E2BC2D7AF002F4116 /* DetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		2B5DBE982BC2B55D002F4116 /* PosterImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterImageView.swift; sourceTree = "<group>"; };
 		2B5DBE9A2BC2B56A002F4116 /* DetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCollectionViewCell.swift; sourceTree = "<group>"; };
 		2B5DBE9C2BC2C4C4002F4116 /* DetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		2B5DBE9E2BC2D7AF002F4116 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 				2B5DBE942BC2AF60002F4116 /* AppTitleView.swift */,
 				2B5DBE982BC2B55D002F4116 /* PosterImageView.swift */,
 				2B5DBE9A2BC2B56A002F4116 /* DetailCollectionViewCell.swift */,
+				2B5DBE9E2BC2D7AF002F4116 /* DetailViewModel.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -236,6 +239,7 @@
 				2B5DBE892BC267C7002F4116 /* Network.swift in Sources */,
 				2B5DBE5C2BC1B289002F4116 /* SceneDelegate.swift in Sources */,
 				2B5DBE8B2BC26801002F4116 /* iTunes.swift in Sources */,
+				2B5DBE9F2BC2D7AF002F4116 /* DetailViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

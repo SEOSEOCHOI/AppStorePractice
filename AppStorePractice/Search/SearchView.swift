@@ -13,6 +13,7 @@ class SearchView: BaseView {
        let view = UITableView()
         view.register(SearchTableViewCell.self, forCellReuseIdentifier: SearchTableViewCell.identifier)
         view.backgroundColor = .clear
+        view.rowHeight = 100
         return view
     }()
     override func configureHierarchy() {

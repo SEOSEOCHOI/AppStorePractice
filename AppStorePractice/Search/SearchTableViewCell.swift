@@ -20,6 +20,7 @@ final class SearchTableViewCell: UITableViewCell {
         let label = UILabel()
         label.font = .systemFont(ofSize: 18, weight: .bold)
         label.textColor = .black
+        label.numberOfLines = 0
         return label
     }()
     

@@ -12,16 +12,20 @@ class SearchViewModel {
     struct Input {
         let searchText: ControlProperty<String> // 검색어
         let searchButtonTap: ControlEvent<Void>// 서치 검색 버튼 클릭
+        let itemSelectd: ControlEvent<IndexPath>
+        let modelSelectd: ControlEvent<Result>
     }
     
     struct Output {
-        let iTunes: PublishSubject<[Result]> // 네트워크 통신을 할 것이기 때문에 subject
+        let iTunes: PublishSubject<[Result]>
+        let modelSelected: ControlEvent<Result>
+        let iTunseData: PublishRelay<Result>
     }
     
     let disposeBag = DisposeBag()
     func transform(input: Input) -> Output {
         let iTunesList = PublishSubject<[Result]>()
-        
+        let appData = PublishRelay<Result>()
         
         input.searchButtonTap
             .throttle(.seconds(1), scheduler: MainScheduler.instance)
@@ -41,7 +45,15 @@ class SearchViewModel {
                                 print("Transform Disposed")
             })
             .disposed(by: disposeBag)
+        
+        Observable.zip(input.itemSelectd, input.modelSelectd)
+            .bind(with: self) { owner, value in
+                appData.accept(value.1)
+            }
+            .disposed(by: disposeBag)
 
-        return Output(iTunes: iTunesList)
+        return Output(iTunes: iTunesList,
+                      modelSelected: input.modelSelectd,
+                      iTunseData: appData)
     }
 }

@@ -23,25 +23,16 @@ struct iTunes: Codable {
 // MARK: - Result
 struct Result: Codable {
     let isGameCenterEnabled: Bool
+    let artworkUrl100: String
+    let screenshotUrls: [String]
+    let artworkUrl512: String
+    let artistViewUrl: String
+    let artworkUrl60: String
+    let kind: String
+    let currency: String
+    let minimumOsVersion: String
+    let trackCensoredName: String
+    let releaseNotes: String // 새로운 소식
+    let artistName: String
+    let description: String // 앱 설명
 }
-
-
-//struct iTunes: Codable {
-//    let resultCount: Int
-//    let app: [App]
-//}
-//struct App: Codable {
-//    let isGameCenterEnabled: Bool
-//    let artworkUrl100: String
-//    let screenshotUrls: [String]
-//    let artworkUrl512: String
-//    let artistViewURL: String
-//    let artworkUrl60: String
-//    let kind: String
-//    let currency: String 
-//    let minimumOsVersion: String
-//    let trackCensoredName: String
-//    let releaseNotes: String // 새로운 소식
-//    let artistName: String
-//    let description: String // 앱 설명
-//}

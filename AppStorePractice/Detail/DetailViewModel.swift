@@ -27,14 +27,16 @@ class DetailViewModel {
         print("=============================")
 
 
-        let appData = PublishRelay<Result>()
-        let photoList = PublishRelay<[String]>()
+        let appData = BehaviorRelay(value: input.result)
+        let photoList = BehaviorRelay(value: input.result.screenshotUrls)
 
-        appData.accept(input.result)
-        photoList.accept(input.result.screenshotUrls)
-        
-        let appDataResult = appData.asDriver(onErrorJustReturn: input.result)
-        let photoListResult = photoList.asDriver(onErrorJustReturn: [])
+        let appDataResult = appData
+            .debug()
+            .asDriver(onErrorJustReturn: input.result)
+            .debug()
+        let photoListResult = photoList
+            .debug()
+            .asDriver(onErrorJustReturn: [])
         print("end Transform")
 
         

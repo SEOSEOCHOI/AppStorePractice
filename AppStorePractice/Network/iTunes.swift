@@ -35,4 +35,5 @@ struct Result: Codable {
     let releaseNotes: String // 새로운 소식
     let artistName: String
     let description: String // 앱 설명
+    let version: String
 }

@@ -31,18 +31,15 @@ class SearchViewModel {
             .throttle(.seconds(1), scheduler: MainScheduler.instance)
             .withLatestFrom(input.searchText)
             .map { String($0) }
-            .flatMap { iTunesNetwork.fetchiTunesData(term: $0) }
+            .flatMap {
+                iTunesNetwork.fetchiTunesDataWithSingle(term: $0)
+                    .catch { error in
+                        return Single<iTunes>.never()
+                    }}
             .subscribe(with: self, onNext: { owner, value in
                 let data = value.results
-                                iTunesList.onNext(data)
-                                print("Transform Next")
-                            }, onError: { _, _ in
-                                print("Transform Error")
-                            }, onCompleted: { _ in
-                                print("Transform Completed")
+                iTunesList.onNext(data)
                 
-                            }, onDisposed: { _ in
-                                print("Transform Disposed")
             })
             .disposed(by: disposeBag)
         
@@ -51,7 +48,7 @@ class SearchViewModel {
                 appData.accept(value.1)
             }
             .disposed(by: disposeBag)
-
+        
         return Output(iTunes: iTunesList,
                       modelSelected: input.modelSelectd,
                       iTunseData: appData)
